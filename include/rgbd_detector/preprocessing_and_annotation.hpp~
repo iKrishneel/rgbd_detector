@@ -1,0 +1,16 @@
+
+#pragma once
+#ifndef _PREPROCESSING_AND_ANNOTATION_H_
+#define _PREPROCESSING_AND_ANNOTATION_H_
+
+class RGBDProcessingAndAnnotation {
+
+ private:
+   
+   
+ public:
+    RGBDProcessingAndAnnotation();
+};
+
+
+#endif /* _PREPROCESSING_AND_ANNOTATION_H_ */
