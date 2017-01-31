@@ -129,21 +129,21 @@ include_directories(
 # add_dependencies(rgbd_detector ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
 
 ## Declare a C++ executable
-#add_executable(rgbd_detector_node src/rgbd_detector_node.cpp)a
-add_executable(preprocessing_and_annotation_node src/preprocessing_and_annotation.cpp)
+add_executable(rgbd_detector_node src/rgbd_detector_node.cpp)
+#add_executable(preprocessing_and_annotation_node src/preprocessing_and_annotation.cpp)
 
 ## Add cmake target dependencies of the executable
 ## same as for the library above
 # add_dependencies(rgbd_detector_node ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
 
 ## Specify libraries to link a library or executable target against
-# target_link_libraries(rgbd_detector_node
+target_link_libraries(rgbd_detector_node
+  ${catkin_LIBRARIES}
+  )
+
+# target_link_libraries(preprocessing_and_annotation_node
 #   ${catkin_LIBRARIES}
 # )
-
-target_link_libraries(preprocessing_and_annotation_node
-  ${catkin_LIBRARIES}
-)
 
 #############
 ## Install ##
