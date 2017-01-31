@@ -1,0 +1,10 @@
+<launch>
+  <arg name="points" default="/camera/depth_registered/points" />
+  <arg name="cam_info" default="/camera/depth_registered/camera_info" />
+  
+  <node pkg="rgbd_detector" type="rgbd_detector_node"
+	name="rgbd_detector" output="screen" clear_params="false">
+    <remap from="input_cloud" to="$(arg points)" />
+    <remap from="input_cinfo" to="$(arg cam_info)" />
+  </node>
+</launch>
